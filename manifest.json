@@ -5,10 +5,16 @@
   "display": "standalone",
   "background_color": "#1f3c88",
   "theme_color": "#1f3c88",
+  "orientation": "portrait",
   "icons": [
     {
-      "src": "https://via.placeholder.com/192",
+      "src": "logoatalho.png",
       "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "logoatalho.png",
+      "sizes": "512x512",
       "type": "image/png"
     }
   ]
