@@ -34,22 +34,6 @@ header button {
   font-size: 18px;
 }
 
-header .texto {
-  flex: 1;
-  margin-left: 12px;
-}
-
-header .texto span {
-  color: var(--cinza-texto);
-  font-size: 14px;
-}
-
-header .texto strong {
-  display: block;
-  color: var(--azul-escuro);
-  font-size: 18px;
-}
-
 /* CARD PRINCIPAL */
 .banner {
   margin: 16px;
@@ -97,38 +81,60 @@ header .texto strong {
   font-size: 14px;
 }
 
-/* MENU LATERAL */
+/* ============================= */
+/* MENU LATERAL (ESTILO OFICIAL) */
+/* ============================= */
+
 #menu {
   position: fixed;
   top: 0;
   left: -100%;
-  width: 280px;
+  width: 300px;
   height: 100%;
-  background: white;
-  transition: .3s;
-  z-index: 10;
+  background: #ffffff;
+  transition: 0.3s ease;
+  z-index: 100;
+  border-radius: 0 22px 22px 0;
+  box-shadow: 6px 0 20px rgba(0, 0, 0, 0.15);
 }
 
 #menu.open {
   left: 0;
 }
 
+/* TOPO DO MENU */
 .menu-topo {
   background: #4e8b4b;
-  padding: 20px;
-  color: white;
+  padding: 28px 20px;
+  color: #fff;
+  text-align: left;
 }
 
 .menu-topo img {
-  width: 70px;
-  height: 70px;
+  width: 72px;
+  height: 72px;
   border-radius: 50%;
-  border: 3px solid white;
+  border: 3px solid #fff;
+  object-fit: cover;
 }
 
 .menu-topo strong {
   display: block;
-  margin-top: 10px;
+  margin-top: 14px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.menu-topo small {
+  display: block;
+  margin-top: 4px;
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+/* ITENS DO MENU */
+.menu-itens {
+  padding: 12px 0;
 }
 
 .menu-itens button {
@@ -138,8 +144,24 @@ header .texto strong {
   border: none;
   text-align: left;
   font-size: 15px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  font-family: 'Inter', Arial, sans-serif;
+  color: #173f8a;
 }
 
+
+.menu-itens button:hover {
+  background: #f2f4f8;
+}
+
+/* ÍCONE (EMOJI) */
+.menu-itens button::first-letter {
+  font-size: 18px;
+}
 /* ============================= */
 /* CARTEIRINHA */
 /* ============================= */
@@ -148,7 +170,6 @@ header .texto strong {
   padding: 16px;
 }
 
-/* CARD PRINCIPAL */
 .carteirinha {
   background: var(--branco);
   border-radius: 24px;
@@ -166,7 +187,6 @@ header .texto strong {
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
 }
 
-
 /* FOTO + QR */
 .linha-superior {
   display: flex;
@@ -177,10 +197,13 @@ header .texto strong {
 
 /* FOTO DO ALUNO */
 .foto {
-  width: 110px;
-  height: 110px;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
   object-fit: cover;
+  object-position: center top;
+  border: 4px solid white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
 /* QR CODE */
@@ -200,16 +223,23 @@ header .texto strong {
   margin: 16px 0;
 }
 
-/* DADOS */
+/* ============================= */
+/* DADOS – AJUSTE IGUAL AO APP */
+/* ============================= */
+
 .dados div {
   display: flex;
-  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
   padding: 12px 0;
   border-bottom: 1px solid #eee;
   font-size: 14px;
+  color: var(--cinza-texto);
 }
 
 .dados span {
+  width: 120px;
+  flex-shrink: 0;
   color: var(--cinza-texto);
 }
 
@@ -226,4 +256,88 @@ header .texto strong {
   font-size: 16px;
 }
 
+/* ============================= */
+/* HOME REAL */
+/* ============================= */
 
+.header-home {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px;
+  background: var(--bg);
+}
+
+.icon-btn {
+  background: #f0f1f5;
+  border: none;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  font-size: 18px;
+}
+
+/* SAUDAÇÃO */
+.saudacao-home {
+  padding: 0 16px;
+  margin-bottom: 12px;
+}
+
+.saudacao-home span {
+  color: var(--cinza-texto);
+  font-size: 16px;
+}
+
+.saudacao-home strong {
+  display: block;
+  font-size: 20px;
+  color: var(--azul-escuro);
+  font-weight: 700;
+}
+
+/* MAIN */
+.home {
+  padding-bottom: 24px;
+}
+
+/* BANNER */
+.banner {
+  margin: 16px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.banner img {
+  width: 100%;
+  display: block;
+}
+
+/* CARDS IMAGEM */
+.card-img {
+  margin: 16px;
+}
+
+.card-img img {
+  width: 100%;
+  border-radius: 20px;
+  display: block;
+}
+
+/* BOTÕES */
+.atalhos {
+  display: flex;
+  gap: 16px;
+  padding: 0 16px;
+}
+
+.atalhos img {
+  width: 100%;
+  border-radius: 20px;
+}
+
+/* VERSÃO */
+.versao-app {
+  text-align: center;
+  color: var(--cinza-texto);
+  font-size: 13px;
+  margin-top: 24px;
+}

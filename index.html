@@ -20,60 +20,77 @@
 <!-- MENU LATERAL -->
 <aside id="menu">
   <div class="menu-topo">
-    <!-- Foto do aluno -->
     <img src="foto.png" alt="Foto Rafael Oliveira Silva">
     <strong>Rafael Oliveira Silva</strong>
     <small>600914411</small>
   </div>
 
   <div class="menu-itens">
-    <button onclick="irCarteira()">🎓 Carteirinha Estudante</button>
+
+    <button class="menu-parent">
+      🎓 Acadêmico
+      <span class="seta">⌄</span>
+    </button>
+
+    <button onclick="irCarteira()">🪪 Carteirinha Estudante</button>
     <button>📄 Documentos Digitais</button>
     <button>💬 Fale Aluno</button>
-    <button>💰 Financeiro</button>
+
+    <button class="menu-parent">
+      💰 Financeiro
+      <span class="seta">⌄</span>
+    </button>
+
     <button>📋 Matrícula Online</button>
     <button>📑 Protocolo</button>
     <button>⚠️ Suas Pendências</button>
+
   </div>
 </aside>
 
-<!-- HEADER -->
-<header>
-  <button id="menuBtn">☰</button>
+<!-- HEADER HOME -->
+<header class="header-home">
+  <button id="menuBtn" class="icon-btn">☰</button>
+  <button class="icon-btn">🔔</button>
+</header>
 
-  <div class="texto">
+<!-- CONTEÚDO -->
+<main class="home">
+
+  <!-- SAUDAÇÃO -->
+  <div class="saudacao-home">
     <span>Olá,</span>
     <strong>RAFAEL OLIVEIRA SILVA</strong>
   </div>
 
-  <button>🔔</button>
-</header>
-
-<!-- CONTEÚDO -->
-<main>
-
   <!-- BANNER -->
   <div class="banner">
-    <!-- Banner da faculdade -->
-    <img src="banner.png" alt="Banner Faculdade">
+    <img src="banner.png" alt="Banner Unitri">
   </div>
 
-  <!-- CARD AZUL -->
-  <div class="card-acao">
-    <h3>vamos começar?</h3>
-    <p>acesse as opções disponíveis</p>
+  <!-- CARD VAMOS COMEÇAR (imagem simulada) -->
+  <div class="card-img">
+    <img src="card-vamos-comecar.png" alt="Vamos começar">
   </div>
 
-  <!-- CARDS INFERIORES -->
-  <div class="cards">
-    <div class="card-mini">Compartilhar App</div>
-    <div class="card-mini">Avaliar App</div>
+  <!-- CARD PROBLEMAS -->
+  <div class="card-img">
+    <img src="card-problemas.png" alt="Problemas no App">
+  </div>
+
+  <!-- BOTÕES -->
+  <div class="atalhos">
+    <img src="btn-compartilhar.png" alt="Compartilhar App">
+    <img src="btn-avaliar.png" alt="Avaliar App">
+  </div>
+
+  <!-- VERSÃO -->
+  <div class="versao-app">
+    Versão do App: 5.2.38
   </div>
 
 </main>
 
-<!-- JS -->
 <script src="app.js"></script>
-
 </body>
 </html>
