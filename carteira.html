@@ -3,37 +3,54 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Carteirinha de Estudante</title>
-
-  <!-- CSS -->
+  <title>Carteirinha</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- HEADER -->
-<header>
-  <button onclick="history.back()">←</button>
+<header class="topo">
+  <button onclick="history.back()">‹</button>
   <h2>Carteirinha</h2>
 </header>
 
-<!-- CONTEÚDO -->
-<main class="carteira">
-  <!-- Foto do aluno -->
-  <img class="foto" src="foto.png" alt="Foto Rafael Oliveira Silva">
+<main class="container">
 
-  <h3>Rafael Oliveira Silva</h3>
-  <p>Matrícula: 600914411</p>
-  <p>Curso: Sistemas de Informação</p>
+  <section class="carteirinha">
 
-  <!-- QR Code (fake, apenas para mostrar) -->
-  <img 
-    class="qr"
-    src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=DEMO-CARTEIRINHA"
-    alt="QR Code"
-  />
+    <!-- CILINDRO AZUL -->
+    <img class="logo" src="unitricarteira.png" alt="Unitri">
 
-  <small>Projeto acadêmico • QR Code ilustrativo</small>
+    <!-- FOTO + QR -->
+    <div class="linha-superior">
+      <img class="foto" src="foto.png" alt="Foto do aluno">
+
+      <img 
+        class="qr"
+        src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=CARTEIRINHA-RAFAEL"
+        alt="QR Code"
+      >
+    </div>
+
+    <!-- MATRÍCULA -->
+    <div class="matricula">
+      Matrícula: <strong>600914411</strong>
+    </div>
+
+    <!-- DADOS -->
+    <div class="dados">
+      <div><span>Situação:</span> MATRICULADO(A)</div>
+      <div><span>Nome:</span> Rafael Oliveira Silva</div>
+      <div><span>Curso:</span> Computação</div>
+      <div><span>CPF:</span> 018963416-24</div>
+      <div><span>RG:</span> 19.555.788</div>
+      <div><span>Dt. Nascimento:</span> 02/04/2003</div>
+      <div><span>Dt. Validade:</span> 25/06/2026</div>
+    </div>
+
+  </section>
+
+  <button class="btn-voltar" onclick="history.back()">Voltar</button>
+
 </main>
 
 </body>
