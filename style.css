@@ -1,73 +1,141 @@
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #f4f6f8;
+:root {
+  --azul-escuro: #173f8a;
+  --azul: #1f5bd8;
+  --cinza-texto: #8a8a8a;
+  --bg: #f6f7fb;
+  --branco: #ffffff;
 }
 
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', Arial, sans-serif;
+  background: var(--bg);
+}
+
+/* HEADER */
 header {
-  background: #1f3c88;
-  color: white;
-  padding: 15px;
+  background: var(--branco);
+  padding: 18px 16px;
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  gap: 10px;
 }
 
 header button {
-  background: none;
+  background: #f0f1f5;
   border: none;
-  color: white;
-  font-size: 22px;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  font-size: 18px;
 }
 
+header .texto {
+  flex: 1;
+  margin-left: 12px;
+}
+
+header .texto span {
+  color: var(--cinza-texto);
+  font-size: 14px;
+}
+
+header .texto strong {
+  display: block;
+  color: var(--azul-escuro);
+  font-size: 18px;
+}
+
+/* CARD PRINCIPAL */
+.banner {
+  margin: 16px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.banner img {
+  width: 100%;
+  display: block;
+}
+
+/* CARD AZUL */
+.card-acao {
+  margin: 16px;
+  background: var(--azul);
+  color: white;
+  padding: 20px;
+  border-radius: 18px;
+}
+
+.card-acao h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.card-acao p {
+  margin: 5px 0 0;
+  font-size: 14px;
+}
+
+/* CARDS INFERIORES */
+.cards {
+  display: flex;
+  gap: 12px;
+  padding: 0 16px 20px;
+}
+
+.card-mini {
+  flex: 1;
+  background: white;
+  border-radius: 16px;
+  padding: 16px;
+  text-align: center;
+  font-size: 14px;
+}
+
+/* MENU LATERAL */
 #menu {
   position: fixed;
   top: 0;
-  left: -260px;
-  width: 250px;
+  left: -100%;
+  width: 280px;
   height: 100%;
   background: white;
-  box-shadow: 2px 0 10px rgba(0,0,0,.2);
-  padding: 15px;
-  transition: 0.3s;
+  transition: .3s;
+  z-index: 10;
 }
 
 #menu.open {
   left: 0;
 }
 
-.perfil {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.perfil img {
-  border-radius: 50%;
-}
-
-#menu button {
-  width: 100%;
-  margin: 5px 0;
-  padding: 10px;
-}
-
-.card {
-  margin: 20px;
+.menu-topo {
+  background: #4e8b4b;
   padding: 20px;
-  background: #1f3c88;
   color: white;
-  border-radius: 10px;
 }
 
-.carteira {
-  text-align: center;
-  padding: 20px;
-}
-
-.carteira .foto {
+.menu-topo img {
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
+  border: 3px solid white;
 }
 
-.qr {
-  margin-top: 15px;
+.menu-topo strong {
+  display: block;
+  margin-top: 10px;
+}
+
+.menu-itens button {
+  width: 100%;
+  padding: 14px 20px;
+  background: none;
+  border: none;
+  text-align: left;
+  font-size: 15px;
 }

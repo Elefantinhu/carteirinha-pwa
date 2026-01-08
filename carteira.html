@@ -3,26 +3,34 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Carteirinha</title>
+
+  <title>Carteirinha de Estudante</title>
+
+  <!-- CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+<!-- HEADER -->
 <header>
   <button onclick="history.back()">←</button>
   <h2>Carteirinha</h2>
 </header>
 
+<!-- CONTEÚDO -->
 <main class="carteira">
-  <img class="foto" src="https://via.placeholder.com/120" />
+  <!-- Foto do aluno -->
+  <img class="foto" src="foto.png" alt="Foto Rafael Oliveira Silva">
 
   <h3>Rafael Oliveira Silva</h3>
   <p>Matrícula: 600914411</p>
   <p>Curso: Sistemas de Informação</p>
 
+  <!-- QR Code (fake, apenas para mostrar) -->
   <img 
     class="qr"
     src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=DEMO-CARTEIRINHA"
+    alt="QR Code"
   />
 
   <small>Projeto acadêmico • QR Code ilustrativo</small>

@@ -1,38 +1,79 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>App Acadêmico (Demo)</title>
-  <link rel="stylesheet" href="style.css">
+
+  <!-- Fonte -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- PWA -->
   <link rel="manifest" href="manifest.json">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header>
-  <button id="menuBtn">☰</button>
-  <h2>Olá, Rafael</h2>
-</header>
-
+<!-- MENU LATERAL -->
 <aside id="menu">
-  <div class="perfil">
-    <img src="https://via.placeholder.com/80" />
+  <div class="menu-topo">
+    <!-- Foto do aluno -->
+    <img src="foto.png" alt="Foto Rafael Oliveira Silva">
     <strong>Rafael Oliveira Silva</strong>
     <small>600914411</small>
   </div>
 
-  <button onclick="irCarteira()">🎓 Carteirinha Estudante</button>
-  <button disabled>📄 Documentos Digitais</button>
-  <button disabled>💰 Financeiro</button>
+  <div class="menu-itens">
+    <button onclick="irCarteira()">🎓 Carteirinha Estudante</button>
+    <button>📄 Documentos Digitais</button>
+    <button>💬 Fale Aluno</button>
+    <button>💰 Financeiro</button>
+    <button>📋 Matrícula Online</button>
+    <button>📑 Protocolo</button>
+    <button>⚠️ Suas Pendências</button>
+  </div>
 </aside>
 
-<main>
-  <div class="card">
-    <h3>Vamos começar?</h3>
-    <p>Acesse as opções disponíveis</p>
+<!-- HEADER -->
+<header>
+  <button id="menuBtn">☰</button>
+
+  <div class="texto">
+    <span>Olá,</span>
+    <strong>RAFAEL OLIVEIRA SILVA</strong>
   </div>
+
+  <button>🔔</button>
+</header>
+
+<!-- CONTEÚDO -->
+<main>
+
+  <!-- BANNER -->
+  <div class="banner">
+    <!-- Banner da faculdade -->
+    <img src="banner.png" alt="Banner Faculdade">
+  </div>
+
+  <!-- CARD AZUL -->
+  <div class="card-acao">
+    <h3>vamos começar?</h3>
+    <p>acesse as opções disponíveis</p>
+  </div>
+
+  <!-- CARDS INFERIORES -->
+  <div class="cards">
+    <div class="card-mini">Compartilhar App</div>
+    <div class="card-mini">Avaliar App</div>
+  </div>
+
 </main>
 
+<!-- JS -->
 <script src="app.js"></script>
+
 </body>
 </html>
